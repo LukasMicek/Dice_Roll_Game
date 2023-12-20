@@ -1,11 +1,14 @@
-﻿
-public class Dice
+﻿public class Dice
 {
-    public int Number { get; } 
-    public int DiceRoll()
+    private Random random;
+
+    public Dice()
     {
-        int _number = new Random().Next(1,7);
-        _number = Number;
-        return Number;
+        random = new Random();
+    }
+
+    public int Roll()
+    {
+        return random.Next(1, 7);
     }
 }
